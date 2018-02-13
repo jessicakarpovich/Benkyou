@@ -9,18 +9,24 @@
         <meta name="description" content="A website to learn Hiragana, Katakana, and Kanji.">
         <meta name="author" content="Jessica Karpovich">
         
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        
         <link rel="stylesheet" href="bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/custom.css">
     </head>
     
     
     <body>
         
+        <!-- Header -->
         <header>
-            <h1><a href="#">Benkyou 勉強</a></h1>
             
             <nav>
+                <h1><a href="#">Benkyou 勉強</a></h1>
+                
                 <ul>
-                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#" class="active">Introduction</a></li>
                     <li><a href="#">Hiragana</a></li>
                     <li><a href="#">Katakana</a></li>
                     <li><a href="#">Kanji</a></li>
@@ -34,17 +40,47 @@
         
         
         
+        <!-- Side Navigation, only visible on large screens -->
+        <div>
+            <h3>Jump to:</h3>
+            <ol>
+                <li><a href="start">Where to Start?</a></li>
+                <li><a href="romaji">Romaji</a></li>
+                <li><a href="hiragana">Hiragana</a></li>
+                <li><a href="katakana">Katakana</a></li>
+                <li><a href="kanji">Kanji</a></li>
+                <li><a href="stroke-order">Stroke Order</a></li>
+            </ol>
+        </div>
         
         
+        
+        
+        
+        <!-- Main Content -->
+        <article>
+            <h2>Introduction</h2>
+            <p class="lead">If you wish to learn Japanese, be it for the sake of manga, anime, 
+            video games or any other great reason, you've come to the right place.</p>
+            
+            <section>
+                <h3>Where to Start?</h3>
+                
+            </section>
+        </article>
+        
+        
+        
+        
+        
+        <!-- Footer -->
         <footer>
-            <div>
-                <p>Contact Info:</p>
-                <address>
-                    123 Random St<br>
-                    This City, CA 90000<br>
-                    Tel: (123) 000-2828
-                </address>
-            </div>
+            <address>
+                Contact Info:
+                123 Random St<br>
+                This City, CA 90000<br>
+                Tel: (123) 000-2828
+            </address>
             
             
             <div>

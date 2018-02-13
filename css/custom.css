@@ -1,0 +1,63 @@
+/*----------------------*/
+    #Reset
+/*----------------------*/
+
+/* Remove bullets, numbers from list items 
+ * Remove padding, doesn't apply to ul' */
+ul, ol, li {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+
+
+/*----------------------*/
+    #Fonts
+/*----------------------*/
+
+h1, h2, h3, h4, h5, h6,
+a, 
+footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+
+
+
+/*----------------------*/
+    #Colors
+/*----------------------*/
+
+/*** Text Colors ***/
+body {
+    color: #000;
+}
+
+/* Headings are dark blue */
+h1, h2, h3, h4, h5, h6,
+nav a {
+    color: #131a39;
+}
+
+/* Links, main nav on hover, and current link are bright pink */
+a, a:hover,
+.active {
+    color: #ac0b64;
+}
+
+
+/*** Background Colors ***/
+nav {
+    background-color: #f6e4f4; /* pastel pink */
+}
+
+footer {
+    background-color: #cdf2f4; /* pastel blue */
+}
