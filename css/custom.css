@@ -2,11 +2,6 @@
     #Reset
 /*----------------------*/
 
-/* Remove bullets from list items */
-nav ul, nav li {
-    list-style-type: none;
-}
-
 /* Keep logo from looking like link on hover */
 h1 a:hover {
     text-decoration: none;
@@ -55,6 +50,12 @@ nav a {
 a, a:hover,
 .active {
     color: #ac0b64;
+}
+
+/* white background around .active */
+.active {
+    background-color: #fff;
+    padding: 1rem;
 }
 
 
