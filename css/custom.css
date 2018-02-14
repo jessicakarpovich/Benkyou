@@ -2,11 +2,15 @@
     #Reset
 /*----------------------*/
 
-/* Remove bullets, numbers from list items 
- * Remove padding, doesn't apply to ul' */
-ul, ol, li {
+/* Remove bullets from list items */
+nav ul, nav li {
     list-style-type: none;
-    padding: 0;
+}
+
+/* Keep logo from looking like link on hover */
+h1 a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -40,6 +44,7 @@ body {
     color: #000;
 }
 
+
 /* Headings are dark blue */
 h1, h2, h3, h4, h5, h6,
 nav a {
@@ -61,3 +66,11 @@ nav {
 footer {
     background-color: #cdf2f4; /* pastel blue */
 }
+
+
+
+
+
+/*----------------------*/
+    #Testing
+/*----------------------*/

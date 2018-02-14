@@ -9,9 +9,11 @@
         <meta name="description" content="A website to learn Hiragana, Katakana, and Kanji.">
         <meta name="author" content="Jessica Karpovich">
         
+        <!-- Links to Google fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
         
+        <!-- Links to stylesheets -->
         <link rel="stylesheet" href="bootstrap/bootstrap.css">
         <link rel="stylesheet" href="css/custom.css">
     </head>
@@ -32,8 +34,9 @@
                     <li><a href="#">Kanji</a></li>
                 </ul>
             </nav>
-            
-            <div></div>
+            <!-- Optimize image later -->
+            <img src="images/debora-rousse-214634.jpg" 
+                 alt="Sakura, Japan's unofficial national flower">
         </header>
         
         
@@ -44,12 +47,12 @@
         <div>
             <h3>Jump to:</h3>
             <ol>
-                <li><a href="start">Where to Start?</a></li>
-                <li><a href="romaji">Romaji</a></li>
-                <li><a href="hiragana">Hiragana</a></li>
-                <li><a href="katakana">Katakana</a></li>
-                <li><a href="kanji">Kanji</a></li>
-                <li><a href="stroke-order">Stroke Order</a></li>
+                <li><a href="#start">Where to Start?</a></li>
+                <li><a href="#romaji">Romaji</a></li>
+                <li><a href="#hiragana">Hiragana</a></li>
+                <li><a href="#katakana">Katakana</a></li>
+                <li><a href="#kanji">Kanji</a></li>
+                <li><a href="#stroke-order">Stroke Order</a></li>
             </ol>
         </div>
         
@@ -59,13 +62,74 @@
         
         <!-- Main Content -->
         <article>
+            <!-- Page Name and Brief Intro -->
             <h2>Introduction</h2>
             <p class="lead">If you wish to learn Japanese, be it for the sake of manga, anime, 
             video games or any other great reason, you've come to the right place.</p>
             
-            <section>
+            
+            <!-- Content Divided By Sections -->
+            <section id="start">
                 <h3>Where to Start?</h3>
-                
+                <p>There are many ways to start learning a language; different approaches work better for some people. I know some people learned Japanese by watching anime and doing so may work perfectly for you. However, I personally recommend starting with the writing system. Not only will that allow you to read Japanese, it will also help you understand how to speak it.</p>
+                <p>Japanese consists of Hiragana, Katakana, and Kanji. Before we jump into what those three are, let’s take a look at romaji.</p>
+            </section>
+            
+            <section id="romaji">
+                <h3>Romaji</h3>
+                <p>According to Google, romaji is “a system of Romanized spelling used to transliterate Japanese”. Simply put, we use romaji, English letters, to write the pronounciation of Japanese characters. For example, think of the word “yakitori”. Yakitori is the romaji for 焼き鳥.</p>
+                <p>Japanese only has five different vowels which are:</p>
+                <ul>
+                    <li>a - as in mama</li>
+                    <li>i - as in see</li>
+                    <li>u - as in moon</li>
+                    <li>e - as in net</li>
+                    <li>o - as in Osaka</li>
+                </ul>
+                <p>Most of the consonants English has have a Japanese equivalent with a few exceptions. The “L” sound does not have its own characer. Instead the “R” sound is rounded and kind of like a combination of “R” and “L”. Also, there is no character for the letter “V”; it is usually written using “B”.</p>
+            </section>
+            
+            <section id="hiragana">
+                <h3>Hiragana</h3>
+                <p>Out of Hiragana, Katakana, and Kanji, I recommend starting with Hiragana because it can be used to write everything. The only problem with doing this is that, since Japanese has many hononyms, with no Katakana or Kanji to separate out words, it would be very difficult to read. It would be like writing sentences in English with no spaces, or capitalization. For example:</p>
+                <p>“ijustreturnedfromthestoreandfoundmymissingcat.helookshungry.”</p>
+                <p>Can you read this? Yes, but it could be written in a cleaner way. That is the same with Japanese.</p>
+            </section>
+            
+            <section id="katakana">
+                <h3>Katakana</h3>
+                <p>While Hiragana is used for words native to the Japanese language, Katakana is used primarily for foreign words. As you can imagine, words like takoyaki would be written in Hiragana, while words like hamburger and iced tea would be written in Katakana. This makes Japanese easier to read and helps separate a sentence into different parts.</p>
+                <p>Nevertheless, it is important to keep in mind that sometimes native Japanese words will be written in Katakana to grab people’s attention or to stand out, and some foreign words that were brought in a long time ago, will be written in Hiragana. For example, even though tobacco is a foreign word, it is written in Hiragana. </p>
+            </section>
+            
+            <section id="kanji">
+                <h3>Kanji</h3>
+                <p>Kanji is the most complex of the three. While Hiragana and Katakana can be treated as letters, Kanji are symbols. Each kanji has a meaning and depending on its context and surrounding kanji, it will have different pronounciations. To keep things simple, for all kanji that I include here, I will also include furigana. Furigana are small hiragana, sometimes written above kanji to indicate its reading.</p>
+                <div class="display-4">
+                    <p><ruby>
+                    水    <rp>(</rp><rt>みず</rt><rp>)</rp>
+                    </ruby></p>
+                    
+                    <p><ruby>
+                    水曜日 <rp>(</rp><rt>すいようび</rt><rp>)</rp>
+                    </ruby></p>
+                </div>
+            </section>
+            
+            <section id="stroke-order">
+                <h3>Stroke Order</h3>
+                <p>Before you jump in and start writing Japanese, I want to bring up stroke order. In Japanese, how you write a character is very important. There is a stroke order that if followed produces nice results and makes it easier to write. The stroke order is different for each character, but in general they all follow the rules of:</p>
+                <ol>
+                    <li>Start in the top left corner.</li>
+                    <li>Left to right.</li>
+                    <li>Top to bottom.</li>
+                    <li>Finish off in bottom right corner. </li>
+                </ol>
+                <p>It sounds complicated now, but as you write more it will come naturally. If you are ever unsure, Google the character in question.</p>
+            </section>
+            
+            <section>
+                <p><a href="#"><strong>Next:</strong> Hiragana</a></p>
             </section>
         </article>
         
@@ -76,7 +140,7 @@
         <!-- Footer -->
         <footer>
             <address>
-                Contact Info:
+                Contact Info:<br>
                 123 Random St<br>
                 This City, CA 90000<br>
                 Tel: (123) 000-2828
@@ -84,12 +148,11 @@
             
             
             <div>
-                <p>Copyright © 2018 Benkyou All rights reserved.</p>
-                <p>Kanji Search Implemented using <a href="https://app.kanjialive.com/api/docs">
+                <p>Copyright © 2018 Benkyou All rights reserved.<br>
+                Kanji Search Implemented using <a href="https://app.kanjialive.com/api/docs">
                     Kanji Alive API</a></p>
             </div>
         </footer>
         
-    </body>
-    
+    </body> 
 </html>
