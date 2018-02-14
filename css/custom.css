@@ -3,6 +3,7 @@
 /*----------------------*/
 
 /* Keep logo from looking like link on hover */
+h1 a:link,
 h1 a:hover {
     text-decoration: none;
     color: inherit;
@@ -66,6 +67,18 @@ nav {
 
 footer {
     background-color: #cdf2f4; /* pastel blue */
+}
+
+
+
+
+
+/*----------------------*/
+    #Spacing
+/*----------------------*/
+
+img {
+    margin-bottom: 3rem;
 }
 
 
