@@ -24,16 +24,20 @@
         <!-- Header -->
         <header class="d-flex  flex-column">
             
-            <nav class="d-flex  flex-column  align-items-sm-center">
-                <h1 class="mb-sm-4  mt-3"><a href="#" class="none">Benkyou 勉強</a></h1>
+            <nav class="d-flex  flex-column">
+                <h1 class="mb-sm-4  mt-3   align-self-sm-center">
+                    <a href="#" class="nav-link">Benkyou 勉強</a></h1>
                 
-                <ul class="nav  flex-column  flex-sm-row">
-                    <li class="nav-link   mr-sm-4  ml-md-4">
-                        <a href="#" class="active">Introduction</a>
-                    </li>
-                    <li class="nav-link   mr-sm-4  ml-md-4"><a href="#">Hiragana</a></li>
-                    <li class="nav-link   mr-sm-4  ml-md-4"><a href="#">Katakana</a></li>
-                    <li class="nav-link   mr-sm-4  ml-md-4"><a href="#">Kanji</a></li>
+                <ul class="nav  flex-column  flex-sm-row   
+                           justify-content-sm-around  justify-content-lg-center">
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="active   nav-link   p-3">Introduction</a></li>
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="nav-link   p-3">Hiragana</a></li>
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="nav-link   p-3">Katakana</a></li>
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="nav-link   p-3">Kanji</a></li>
                 </ul>
             </nav>
             
@@ -94,7 +98,7 @@
                         <h3>Romaji</h3>
                         <p>According to Google, romaji is “a system of Romanized spelling used to transliterate Japanese”. Simply put, we use romaji, English letters, to write the pronounciation of Japanese characters. For example, think of the word “yakitori”. Yakitori is the romaji for 焼き鳥.</p>
                         <p>Japanese only has five different vowels which are:</p>
-                        <ul class="list-unstyled   align-self-center">
+                        <ul class="list-unstyled   mx-auto">
                             <li>a - as in mama</li>
                             <li>i - as in see</li>
                             <li>u - as in moon</li>
@@ -155,6 +159,7 @@
         
         
         <!-- Footer -->
+        <!-- Column Layout until md breakpoint, then center copyright div -->
         <footer class="row   mx-0">
             <address class="col-md-3  col-lg-2  offset-1   mt-3">
                 Contact Info:<br>
@@ -163,8 +168,7 @@
                 Tel: (123) 000-2828
             </address>
             
-            <div class="col-md-6  col-lg-6   offset-1  offset-md-0   
-                        d-flex  align-items-center  justify-content-md-center">
+            <div class="col-md-6  col-lg-6   offset-1  offset-md-0   my-auto  mx-md-auto">
                 <p>Copyright © 2018 Benkyou All rights reserved.<br>
                 Kanji Search Implemented using 
                     <a href="https://app.kanjialive.com/api/docs">Kanji Alive API</a>

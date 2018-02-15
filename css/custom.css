@@ -3,9 +3,9 @@
 /*----------------------*/
 
 /* Keep logo from looking like link on hover */
+/* a:link needs to come before a:hover for it to work */
 h1 a:link,
 h1 a:hover {
-    text-decoration: none;
     color: inherit;
 }
 
@@ -17,14 +17,14 @@ h1 a:hover {
     #Fonts
 /*----------------------*/
 
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
 h1, h2, h3, h4, h5, h6,
 a, 
 footer {
     font-family: 'Roboto', sans-serif;
-}
-
-body {
-    font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -53,14 +53,15 @@ a, a:hover,
     color: #ac0b64;
 }
 
+
+/*** Background Colors ***/
 /* white background around .active */
+nav li a:hover,
 .active {
     background-color: #fff;
-    padding: 1rem;
 }
 
 
-/*** Background Colors ***/
 nav {
     background-color: #f6e4f4; /* pastel pink */
 }
@@ -76,7 +77,6 @@ footer {
 /*----------------------*/
     #Spacing
 /*----------------------*/
-
 
 
 
