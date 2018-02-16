@@ -16,15 +16,16 @@ h1 a:hover {
 /*----------------------*/
     #Fonts
 /*----------------------*/
-
-body {
-    font-family: 'Libre Baskerville', serif;
-}
+/* Keep body font family declaration at the end */
 
 h1, h2, h3, h4, h5, h6,
 a, 
 footer {
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -75,8 +76,40 @@ footer {
 
 
 /*----------------------*/
-    #Spacing
+    #Hamburger Menu
 /*----------------------*/
+
+/* 576px first breakpoint in Bootstrap 4 */
+/* This is needed for the rest to work */
+.menu-icon {
+    text-indent: -9999px;
+}
+
+/* before the first breakpoint */
+@media (max-width: 576px) { 
+    /* make h1 smaller to fit text and icon */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    /* add hamburger icon, move off div text */
+    .menu-icon {
+        background: url('../images/Hamburger_Icon.png')
+            no-repeat top right;
+        width: 45px;
+        height: 45px;
+        text-indent: -9999px;
+    }
+    
+    /* add X icon, move off div text */
+    .expanded-menu-icon {
+        background: url('../images/Close_Icon.png')
+            no-repeat top right;
+        width: 45px;
+        height: 45px;
+        text-indent: -9999px;
+    }
+}
 
 
 
@@ -85,3 +118,4 @@ footer {
 /*----------------------*/
     #Testing
 /*----------------------*/
+

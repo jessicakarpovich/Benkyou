@@ -23,13 +23,20 @@
         
         <!-- Header -->
         <header class="d-flex  flex-column">
-            
             <nav class="d-flex  flex-column">
-                <h1 class="mb-sm-4  mt-3   align-self-sm-center">
-                    <a href="#" class="nav-link">Benkyou 勉強</a></h1>
                 
-                <ul class="nav  flex-column  flex-sm-row   
-                           justify-content-sm-around  justify-content-lg-center">
+                <div class="d-flex  align-items-center   justify-content-between">
+                    <h1 class="mb-sm-4  mt-3   mx-sm-auto">
+                        <a href="#" class="nav-link">Benkyou 勉強</a></h1>
+
+                    <div class="menu-icon  js-menu   mt-2  mr-4   d-sm-none">
+                        Close Menu</div><!-- icon, display none after sm breakpoint -->
+                 </div><!-- condensed navigation container -->
+                
+                
+                <ul class="d-none   nav  flex-column   d-sm-flex  flex-sm-row   
+                           justify-content-sm-around  justify-content-lg-center
+                           js-main-nav">
                     <li class="nav-item   mx-lg-5">
                         <a href="#" class="active   nav-link   p-3">Introduction</a></li>
                     <li class="nav-item   mx-lg-5">
@@ -38,17 +45,17 @@
                         <a href="#" class="nav-link   p-3">Katakana</a></li>
                     <li class="nav-item   mx-lg-5">
                         <a href="#" class="nav-link   p-3">Kanji</a></li>
-                </ul>
+                </ul><!-- main nav links -->
             </nav>
             
-            <img class="mb-4   px-0   align-self-center"
+            <img class="mb-4   px-0   align-self-center   js-covered"
                  src="images/sakura-sm.jpg"
-                 srcset="images/sakura-lg.jpg 3600w,
+                 alt="Sakura, Japan's unofficial national flower"
+                 srcset="images/sakura-sm.jpg 400w,
                          images/sakura-md.jpg 1200w,
-                         images/sakura-sm.jpg 400w"
+                         images/sakura-lg.jpg 3600w"
                  sizes="(max-width: 992px) 100vw,
-                        83vw"
-                 alt="Sakura, Japan's unofficial national flower">
+                        83vw">
         </header>
         
         
@@ -124,14 +131,14 @@
                     <section id="kanji" class="mb-5">
                         <h3>Kanji</h3>
                         <p>Kanji is the most complex of the three. While Hiragana and Katakana can be treated as letters, Kanji are symbols. Each kanji has a meaning and depending on its context and surrounding kanji, it will have different pronounciations. To keep things simple, for all kanji that I include here, I will also include furigana. Furigana are small hiragana, sometimes written above kanji to indicate its reading.</p>
-                        <div class="display-4   row  justify-content-center">
-                            <p class="mr-5"><ruby>
-                            水    <rp>(</rp><rt>みず</rt><rp>)</rp>
-                            </ruby></p>
+                        <div class="display-4   d-flex  flex-column  flex-sm-row  
+                                    align-items-center  justify-content-sm-center">
+                            <p class="mr-sm-5">
+                                <ruby>水<rp>(</rp><rt>みず</rt><rp>)</rp></ruby>
+                            </p>
 
-                            <p class="ml-5"><ruby>
-                            水曜日 <rp>(</rp><rt>すいようび</rt><rp>)</rp>
-                            </ruby></p>
+                            <p class="ml-sm-5">
+                                <ruby>水曜日 <rp>(</rp><rt>すいようび</rt><rp>)</rp></ruby></p>
                         </div>
                     </section>
 
@@ -176,5 +183,8 @@
             </div><!-- copyright container -->
         </footer>
 
+        
+        <script src="scripts/scripts.js"></script>
+        
     </body> 
 </html>
