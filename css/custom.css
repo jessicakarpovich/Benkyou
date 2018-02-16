@@ -104,7 +104,7 @@ footer {
     
     /* make .display-1 smaller to fit full heading */
     .display-1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     
     /* add hamburger icon, move off div text */
@@ -147,9 +147,11 @@ footer {
     color: #ac0b64;
 }
 
-/* remove border*/
+/* remove border, center text, keep furigana on one line*/
 .table td {
     border: none;
+    text-align: center;
+    white-space: nowrap;
 }
 
 /* Bootstrap 4 - md breakpoint at 768 */
