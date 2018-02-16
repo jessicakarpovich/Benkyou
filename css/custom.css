@@ -159,3 +159,7 @@ footer {
         max-width: 50%;
     }
 }
+
+.large-text {
+    font-size: 2rem;
+}
