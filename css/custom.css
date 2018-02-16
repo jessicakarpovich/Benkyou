@@ -143,7 +143,7 @@ footer {
 }
 
 /* change rt (romaji) color to be bright pink */
-.kana rt {
+.kana rt, .important {
     color: #ac0b64;
 }
 
@@ -162,4 +162,8 @@ footer {
 
 .large-text {
     font-size: 2rem;
+}
+
+.xl-text {
+    font-size: 4rem;
 }
