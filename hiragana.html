@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Benkyou 勉強 - Hiragana</title>
+        <meta name="description" content="A website to learn Hiragana, Katakana, and Kanji.">
+        <meta name="author" content="Jessica Karpovich">
+        
+        <!-- Links to Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        
+        <!-- Links to stylesheets -->
+        <link rel="stylesheet" href="bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    
+    <body>
+    
+        <!-- Header -->
+        <header class="d-flex  flex-column   mb-4">
+            <nav class="d-flex  flex-column">
+                
+                <div class="d-flex  align-items-center   justify-content-between">
+                    <h1 class="mb-sm-4  mt-3   mx-sm-auto">
+                        <a href="index.html" class="nav-link">Benkyou 勉強</a></h1>
+
+                    <div class="menu-icon  js-menu   mt-2  mr-4   d-sm-none">
+                        Close Menu</div><!-- icon, display none after sm breakpoint -->
+                 </div><!-- condensed navigation container -->
+                
+                
+                <ul class="d-none   nav  flex-column   d-sm-flex  flex-sm-row   
+                           justify-content-sm-around  justify-content-lg-center
+                           js-main-nav">
+                    <li class="nav-item   mx-lg-5">
+                        <a href="index.html" class="nav-link   p-3">Introduction</a></li>
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="active   nav-link   p-3">Hiragana</a></li>
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="nav-link   p-3">Katakana</a></li>
+                    <li class="nav-item   mx-lg-5">
+                        <a href="#" class="nav-link   p-3">Kanji</a></li>
+                </ul><!-- main nav links -->
+            </nav>
+            
+            <h2 class="display-1  mt-4   align-self-center   js-covered">Hiragana ひらがな</h2>
+        </header>
+        
+        
+        
+        
+        
+        <!-- Container div for sidenav and content -->
+        <div class="container">
+            <div class="row">
+            
+                <!-- Side Navigation, only visible on large screens -->
+                <div class="d-none  d-xl-block   col-xl-2">
+                    
+                    <h3>Jump to:</h3>
+                    <ol class="list-unstyled">
+                        <li><a href="#basics">The Basics</a></li>
+                        <li><a href="#hiragana-chart">Hiragana Chart</a></li>
+                        <li><a href="#special-rows">Special Rows</a></li>
+                        <li><a href="#tentens">Tentens</a></li>
+                        <li><a href="#maru">Maru</a></li>
+                        <li><a href="#ya-row">Ya, Yu, Yo</a></li>
+                        <li><a href="#chiisai-tsu">Chiisai Tsu</a></li>
+                        <li><a href="#stroke-order">Stroke Order</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ol>
+                </div>
+                
+                
+                
+                
+                
+                <!-- Main Content -->
+                <article class="col-xl-10">
+                    
+                    <!-- Page Name and Brief Intro -->
+                    <h2>Hiragana</h2>
+                    <p class="lead   mb-5">If you are unfamiliar with romaji, please first check out Introduction: Romaji.</p>
+                    
+                    
+                    <!-- Content Divided By Sections -->
+                    <section id="basics" class="mb-5   d-flex  flex-column">
+                        <h3>The Basics</h3>
+                        <p>Hiragana is fairly simple to understand after you grasp the basics. The first five Hiragana are:</p>
+                        
+                        <table class="table   align-self-center">
+                            <tr><!-- a row -->
+                                <td><ruby class="kana">あ<rt>a</rt></ruby></td>
+                                <td><ruby class="kana">い<rt>i</rt></ruby></td>
+                                <td><ruby class="kana">う<rt>u</rt></ruby></td>
+                                <td><ruby class="kana">え<rt>e</rt></ruby></td>
+                                <td><ruby class="kana">お<rt>o</rt></ruby></td>
+                            </tr>
+                        </table>
+                        
+                        <p>Pretty much all other Hiragana build upon this. For example the next five are:</p>
+                        
+                        <table class="table   align-self-center">
+                            <tr><!-- ka row -->
+                                <td><ruby class="kana">か<rt>ka</rt></ruby></td>
+                                <td><ruby class="kana">き<rt>ki</rt></ruby></td>
+                                <td><ruby class="kana">く<rt>ku</rt></ruby></td>
+                                <td><ruby class="kana">け<rt>ke</rt></ruby></td>
+                                <td><ruby class="kana">こ<rt>ko</rt></ruby></td>
+                            </tr>
+                        </table>
+                        
+                        <p>Do you see the pattern? The vowels stay the same and there are different characters for different consonants. There are a few exceptions of course, but we’ll talk about them later.</p>
+                    </section>
+                    
+                    <section id="hiragana-chart" class="mb-5   d-flex  flex-column">
+                        <h3>Hiragana Chart</h3>
+                        <p>Below I have included Hiragana along with their romaji except a couple that are no longer used. At this point I’m not telling you to memorize or study them, just look at them and find some patterns.</p>
+                        
+                            <table class="table   align-self-center">
+                                <tr><!-- a row -->
+                                    <td><ruby class="kana">あ<rt>a</rt></ruby></td>
+                                    <td><ruby class="kana">い<rt>i</rt></ruby></td>
+                                    <td><ruby class="kana">う<rt>u</rt></ruby></td>
+                                    <td><ruby class="kana">え<rt>e</rt></ruby></td>
+                                    <td><ruby class="kana">お<rt>o</rt></ruby></td>
+                                </tr>
+                                <tr><!-- ka row -->
+                                    <td><ruby class="kana">か<rt>ka</rt></ruby></td>
+                                    <td><ruby class="kana">き<rt>ki</rt></ruby></td>
+                                    <td><ruby class="kana">く<rt>ku</rt></ruby></td>
+                                    <td><ruby class="kana">け<rt>ke</rt></ruby></td>
+                                    <td><ruby class="kana">こ<rt>ko</rt></ruby></td>
+                                </tr>
+                                <tr><!-- sa row -->
+                                    <td><ruby class="kana">さ<rt>sa</rt></ruby></td>
+                                    <td><ruby class="kana">し<rt>shi</rt></ruby></td>
+                                    <td><ruby class="kana">す<rt>su</rt></ruby></td>
+                                    <td><ruby class="kana">せ<rt>se</rt></ruby></td>
+                                    <td><ruby class="kana">そ<rt>so</rt></ruby></td>
+                                </tr>
+                                <tr><!-- ta row -->
+                                    <td><ruby class="kana">た<rt>ta</rt></ruby></td>
+                                    <td><ruby class="kana">ち<rt>chi</rt></ruby></td>
+                                    <td><ruby class="kana">つ<rt>tsu</rt></ruby></td>
+                                    <td><ruby class="kana">て<rt>te</rt></ruby></td>
+                                    <td><ruby class="kana">と<rt>to</rt></ruby></td>
+                                </tr>
+                                <tr><!-- na row -->
+                                    <td><ruby class="kana">な<rt>na</rt></ruby></td>
+                                    <td><ruby class="kana">に<rt>ni</rt></ruby></td>
+                                    <td><ruby class="kana">ぬ<rt>nu</rt></ruby></td>
+                                    <td><ruby class="kana">ね<rt>ne</rt></ruby></td>
+                                    <td><ruby class="kana">の<rt>no</rt></ruby></td>
+                                </tr>
+                                <tr><!-- ha row -->
+                                    <td><ruby class="kana">は<rt>ha</rt></ruby></td>
+                                    <td><ruby class="kana">ひ<rt>hi</rt></ruby></td>
+                                    <td><ruby class="kana">ふ<rt>fu</rt></ruby></td>
+                                    <td><ruby class="kana">へ<rt>he</rt></ruby></td>
+                                    <td><ruby class="kana">ほ<rt>ho</rt></ruby></td>
+                                </tr>
+                                <tr><!-- ma row -->
+                                    <td><ruby class="kana">ま<rt>ma</rt></ruby></td>
+                                    <td><ruby class="kana">み<rt>mi</rt></ruby></td>
+                                    <td><ruby class="kana">む<rt>mu</rt></ruby></td>
+                                    <td><ruby class="kana">め<rt>me</rt></ruby></td>
+                                    <td><ruby class="kana">も<rt>mo</rt></ruby></td>
+                                </tr>
+                                <tr><!-- ya row -->
+                                    <td><ruby class="kana">や<rt>ya</rt></ruby></td>
+                                    <td></td>
+                                    <td><ruby class="kana">ゆ<rt>yu</rt></ruby></td>
+                                    <td></td>
+                                    <td><ruby class="kana">よ<rt>yo</rt></ruby></td>
+                                </tr>
+                                <tr><!-- ra row -->
+                                    <td><ruby class="kana">ら<rt>ra</rt></ruby></td>
+                                    <td><ruby class="kana">り<rt>ri</rt></ruby></td>
+                                    <td><ruby class="kana">る<rt>ru</rt></ruby></td>
+                                    <td><ruby class="kana">れ<rt>re</rt></ruby></td>
+                                    <td><ruby class="kana">ろ<rt>ro</rt></ruby></td>
+                                </tr>
+                                <tr><!-- wa row -->
+                                    <td><ruby class="kana">わ<rt>wa</rt></ruby></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><ruby class="kana">を<rt>wo</rt></ruby></td>
+                                </tr>
+                                <tr><!-- n/m row -->
+                                    <td><ruby class="kana">ん<rt>n/m</rt></ruby></td>
+                                </tr>
+                            </table>
+                    </section>
+                    
+                    
+                    
+                    <section class="mb-5   d-flex">
+                        <p class="mr-auto">
+                            <a href="index.html"><strong>Back:</strong> Introduction</a></p>
+                        <p class="ml-auto"><a href="#"><strong>Next:</strong> Katakana</a></p>
+                    </section>
+                </article>
+            </div><!-- row -->
+        </div><!-- main container -->
+        
+        
+        
+        
+        
+        <!-- Footer -->
+        <!-- Column Layout until md breakpoint, then center copyright div -->
+        <footer class="row   mx-0">
+            <address class="col-md-3  col-lg-2  offset-1   mt-3">
+                Contact Info:<br>
+                123 Random St<br>
+                This City, CA 90000<br>
+                Tel: (123) 000-2828
+            </address>
+            
+            <div class="col-md-6  col-lg-6   offset-1  offset-md-0   my-auto  mx-md-auto">
+                <p>Copyright © 2018 Benkyou All rights reserved.<br>
+                Kanji Search Implemented using 
+                    <a href="https://app.kanjialive.com/api/docs">Kanji Alive API</a>
+                </p>
+            </div><!-- copyright container -->
+        </footer>
+        
+        
+        <script src="scripts/scripts.js"></script>
+        
+    </body>
+</html>

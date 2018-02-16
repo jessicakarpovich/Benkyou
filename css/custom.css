@@ -102,6 +102,11 @@ footer {
         font-size: 2rem;
     }
     
+    /* make .display-1 smaller to fit full heading */
+    .display-1 {
+        font-size: 5rem;
+    }
+    
     /* add hamburger icon, move off div text */
     .menu-icon {
         background: url('../images/Hamburger_Icon.png')
@@ -128,3 +133,29 @@ footer {
 /*----------------------*/
 /*    #Testing          */
 /*----------------------*/
+
+/* increase size of kana */
+.kana {
+    font-size: 2rem;
+    
+    /* not supported in most browsers, will appear above */
+    ruby-position: under;
+}
+
+/* change rt (romaji) color to be bright pink */
+.kana rt {
+    color: #ac0b64;
+}
+
+/* remove border*/
+.table td {
+    border: none;
+}
+
+/* Bootstrap 4 - md breakpoint at 768 */
+/* control table width to be half after the md breakpoint */
+@media (min-width: 769px) {
+    .table {
+        max-width: 50%;
+    }
+}
