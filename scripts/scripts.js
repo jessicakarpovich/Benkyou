@@ -55,3 +55,69 @@ function expandMenu() {
 
 // add click event on the menuIcon
 menuIcon.addEventListener('click', expandMenu, false);
+
+
+
+
+
+/**********  *********/
+    /*Stroke Order - Kanji Page*/
+/*********   *********/
+
+// Key from mashape https://market.mashape.com/JessicaKarpovich/applications/Kanji-Search
+const key = "3SIUgT55Vxmsht3cVhbNhsPpXEPtp1NZQ84jsn24FyCRXTvJEB";
+
+// this is for detailed info by kanji - has to be entered as kanji
+const api_endpoint = "https://kanjialive-api.p.mashape.com/api/public/kanji/";
+
+// create a custom Headers object as shown in the documentation
+// Make sure to include the key and accept
+const myHeaders = new Headers();
+myHeaders.append("X-Mashape-Key", "3SIUgT55Vxmsht3cVhbNhsPpXEPtp1NZQ84jsn24FyCRXTvJEB");
+myHeaders.append("Accept", "application/json");
+
+// use myInit to have custom headers
+const myInit = { headers: myHeaders };
+
+
+const numberArray = ["一",　"二",　"三",　"四",　"五",　"六",　"七",　"八",　"九",　"十"];
+const divArray = ["js-1", "js-2", "js-3", "js-4", "js-5", "js-6", "js-7", "js-8", "js-9", "js-10"];
+
+
+function showStrokeOrder(array) {
+    for (let i=0; i < array.length; i++) {
+        const url = api_endpoint + array[i];
+        
+        //Pass the request object the url (as for fetch) and the custom setup (myInit)
+        const request = new Request(url, myInit);
+        
+        // Pass request to fetch, not the url
+        fetch(request) 
+            .then(response => response.json())
+            .then(results => {
+            // test results
+                console.log(results);
+                getStrokes(results, i);
+            })
+            .catch(function(error) {
+                console.log(error);
+        });
+    }
+}
+
+showStrokeOrder(numberArray);
+
+
+function getStrokes(results, i) {
+    let imageDiv = document.querySelector(`[data-name=${CSS.escape(divArray[i])}]`);
+    
+    if (imageDiv) {
+        let content = "";
+
+        for (let j=0; j < results.kanji.strokes.images.length; j++) {
+            content += "<img class='stroke' src='" + results.kanji.strokes.images[j] + "' ";
+            content += "alt='Stroke " + (j+1) + " of " + results.kanji.character + "'></img>";
+            imageDiv.innerHTML = content;
+        }
+    }
+}
