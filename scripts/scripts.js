@@ -8,10 +8,15 @@ const menuIcon = document.querySelector('.js-menu');
 
 /*** Function to expand the main navigation on mobile (hamburger menu) ***/
 function expandMenu() {
+    
+    /* Variables */
     // get the ul with the navigation links
     const mainNav = document.querySelector('.js-main-nav');
+    
     // get the content that is supposed to be covered by expanded menu on mobile
     const coveredContent = document.querySelector('.js-covered');
+    // select the header element
+    const header = document.querySelector('header');
     
     
     // if the menu has the default menu-icon class it is not expanded, expand it
@@ -26,6 +31,8 @@ function expandMenu() {
         
         // don't display the content that is meant to be covered
         coveredContent.classList.add('d-none');
+        // add box-shadow below header
+        header.classList.add('box-shadow');
     } 
     
     // if the menu has the expanded-menu-icon class, return it to normal
@@ -40,6 +47,8 @@ function expandMenu() {
         
         // display the previously covered content
         coveredContent.classList.remove('d-none');
+        // remove box-shadow from below header
+        header.classList.remove('box-shadow');
     }
 }
 

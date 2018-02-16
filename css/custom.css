@@ -1,10 +1,9 @@
 /*----------------------*/
-    #Reset
+/*    #Reset            */
 /*----------------------*/
 
 /* Keep logo from looking like link on hover */
 /* a:link needs to come before a:hover for it to work */
-h1 a:link,
 h1 a:hover {
     color: inherit;
 }
@@ -14,8 +13,9 @@ h1 a:hover {
 
 
 /*----------------------*/
-    #Fonts
+/*    #Fonts            */
 /*----------------------*/
+
 /* Keep body font family declaration at the end */
 
 h1, h2, h3, h4, h5, h6,
@@ -33,7 +33,7 @@ body {
 
 
 /*----------------------*/
-    #Colors
+/*    #Colors           */
 /*----------------------*/
 
 /*** Text Colors ***/
@@ -76,17 +76,27 @@ footer {
 
 
 /*----------------------*/
-    #Hamburger Menu
+/*    #Box-shadows      */
+/*----------------------*/
+
+/* used for bottom of expanded menu on mobile */
+.box-shadow {
+    box-shadow: 0 5px 5px grey;
+}
+
+
+
+
+
+/*----------------------*/
+/*    #Hamburger Menu   */
 /*----------------------*/
 
 /* 576px first breakpoint in Bootstrap 4 */
-/* This is needed for the rest to work */
-.menu-icon {
-    text-indent: -9999px;
-}
-
 /* before the first breakpoint */
+
 @media (max-width: 576px) { 
+    
     /* make h1 smaller to fit text and icon */
     h1 {
         font-size: 2rem;
@@ -116,6 +126,5 @@ footer {
 
 
 /*----------------------*/
-    #Testing
+/*    #Testing          */
 /*----------------------*/
-
