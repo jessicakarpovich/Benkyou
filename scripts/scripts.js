@@ -96,7 +96,6 @@ function showStrokeOrder(array) {
             .then(response => response.json())
             .then(results => {
             // test results
-                console.log(results);
                 getStrokes(results, i);
             })
             .catch(function(error) {
