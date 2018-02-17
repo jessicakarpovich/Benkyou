@@ -63,11 +63,11 @@
                     
                     <h3>Jump to:</h3>
                     <ol class="list-unstyled">
+                        <li><a href="#kanji-search">Kanji Search</a></li>
                         <li><a href="#furigana">Furigana</a></li>
                         <li><a href="#numbers">Numbers 1-10</a></li>
                         <li><a href="#stroke-order">Stroke Order</a></li>
                         <li><a href="#conclusion">Conclusion</a></li>
-                        <li><a href="#kanji-search">Kanji Search</a></li>
                     </ol>
                 </div>
                 
@@ -80,7 +80,37 @@
                     
                     <!-- Page Name and Brief Intro -->
                     <h2>Kanji</h2>
-                    <p class="lead   mb-5">Before you start diving into kanji I highly recommend being comfortable with at least Hiragana, enough to at least read it. That is because then you will be able to read Furigana, or the small Hiragana sometimes printed over kanji. Also, be aware that there are a lot of kanji and they are not something you can learn overnight.</p>
+                    <p class="lead   mb-5">Before you start diving into kanji I highly recommend being comfortable with at least Hiragana, enough to at least read it. That is because then you will be able to read Furigana, or the small Hiragana sometimes printed over kanji. As there are a lot of kanji and I will not be covering all of them, below is a search field you can use to look them up.</p>
+                    
+                    
+                    <section id="kanji-search" class="mb-5   d-flex  flex-column">
+                        <h3>Kanji Search</h3>
+                        <p>Use the search field below to enter a kanji and see its readings and meaning.</p>
+                        
+                        <article>
+                            <div class="d-flex  flex-column  align-items-center">
+                                <form role="search">
+                                    <div class="d-flex">
+                                        <input type="search" class="form-control" id="kanji-search-field" name="q" 
+                                               placeholder="Enter a kanji"
+                                               aria-label="Search for kanji meaning and readings.">
+                                        <button type="submit" class="btn  btn-red   js-search-btn">Search</button>
+                                    </div><!-- search input and button container -->
+                                </form>
+
+                                <p class="xl-text   js-kanji"></p>
+                                <div>
+                                    <p class="js-meaning"></p>
+                                    <p class="js-kunyomi"></p>
+                                    <p class="js-onyomi"></p>
+                                </div><!-- container for kanji meaning and readings -->
+                                
+                                <p class="js-error"></p>
+                            </div><!-- Container for search field and main search results -->
+                            
+                            <div class="js-examples"></div><!-- container for kanji examples -->
+                        </article><!-- container for form and search results -->
+                    </section>
                     
                     
                     <section id="furigana" class="mb-5">
@@ -234,37 +264,7 @@
                     
                     <section id="conclusion" class="mb-5">
                         <h3>Conclusion</h3>
-                        <p>This is only meant as an introduction to kanji, and I hope you gained a better understanding by reading this. Just like with hiragana and katakana, flashcards make learning kanji much easier. Write the knaji on one side and the translation and readings on the other. Below is a search field that you can use to look up kanji you do not know.</p>
-                    </section>
-                    
-                    <section id="kanji-search" class="mb-5   d-flex  flex-column">
-                        <h3>Kanji Search</h3>
-                        <p>Use the search field below to enter a kanji and see its readings and meaning.</p>
-                        
-                        <article>
-                            <div class="d-flex  flex-column  align-items-center">
-                                <form role="search">
-                                    <div class="d-flex">
-                                        <input type="search" class="form-control" id="kanji-search-field" name="q" 
-                                               placeholder="Enter a kanji"
-                                               aria-label="Search for kanji meaning and readings.">
-                                        <button type="submit" class="btn  btn-red   js-search-btn">Search</button>
-                                    </div><!-- search input and button container -->
-                                </form>
-
-                                <p class="xl-text   js-kanji"></p>
-                                
-                                <div>
-                                    <p class="js-meaning"></p>
-                                    <p class="js-kunyomi"></p>
-                                    <p class="js-onyomi"></p>
-                                </div>
-                                
-                                <p class="js-error"></p>
-                            </div>
-                            
-                            <div class="js-examples"></div>
-                        </article><!-- container for form and search results -->
+                        <p>This is only meant as an introduction to kanji, and I hope you gained a better understanding by reading this. Just like with hiragana and katakana, flashcards make learning kanji much easier. Write the knaji on one side and the translation and readings on the other.</p>
                     </section>
                     
                     

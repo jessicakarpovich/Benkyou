@@ -81,9 +81,9 @@ const myInit = { headers: myHeaders };
 
 
 
-/**********  *********/
-    /*Stroke Order - Numbers 1-10*/
-/*********   *********/
+/*----------------  ----------------*/
+    /* Stroke Order - Numbers 1-10 */
+/*----------------  ----------------*/
 
 /* Array numbers 1-10 kanji*/
 const numberArray = ["一",　"二",　"三",　"四",　"五",　"六",　"七",　"八",　"九",　"十"];
@@ -94,32 +94,29 @@ const divArray = ["js-1", "js-2", "js-3", "js-4", "js-5", "js-6", "js-7", "js-8"
 /* function that sends a fetch request for each value from array argument */
 function showStrokeOrder(array) {
     
-    /* Check that the first div from divArray is not null */
-    if (document.querySelector(`[data-name=${CSS.escape(divArray[0])}]`)) {
-        // for each value in array, create a url string
-        for (let i=0; i < array.length; i++) {
-            const url = api_endpoint + array[i];
+    // for each value in array, create a url string
+    for (let i=0; i < array.length; i++) {
+        const url = api_endpoint + array[i];
 
-            //Pass the request object the url (as for fetch) and the custom setup (myInit)
-            const request = new Request(url, myInit);
+        //Pass the request object the url and the custom setup (myInit)
+        const request = new Request(url, myInit);
 
-            // Pass request to fetch, not the url
-            fetch(request) 
-                .then(response => response.json())
-                .then(results => {
-                // get results, pass for loop index value
-                    getStrokes(results, i);
-                })
-                .catch(function(error) {
-                    console.log(error);
-            });
-        }
+        // Pass request to fetch
+        fetch(request) 
+            .then(response => response.json())
+            .then(results => {
+            // get results, pass for loop index value
+                getStrokes(results, i);
+        })
+            .catch(function(error) {
+                console.log(error);
+        });
     }
 }
 
 
 function getStrokes(results, i) {
-    // use i from for loop in ShowStrokeOrder(), to get the right index for divArray
+    // use i from for loop in showStrokeOrder(), to get the right index for divArray
     let imageDiv = document.querySelector(`[data-name=${CSS.escape(divArray[i])}]`);
     
     // if it is not null
@@ -136,10 +133,12 @@ function getStrokes(results, i) {
 }
 
 
-// add event listener to window to show the stroke order of numbers
-//window.addEventListener('load', function() { showStrokeOrder(numberArray) }, false);
-// Show stroke order
-showStrokeOrder(numberArray);
+/* Check that the first div from divArray is not null */
+if (document.querySelector(`[data-name=${CSS.escape(divArray[0])}]`)) {
+    // add event listener to window to show the stroke order of numbers
+    window.addEventListener('load', function() { showStrokeOrder(numberArray) }, false);
+}
+
 
 
 /**********  *********/
@@ -147,6 +146,7 @@ showStrokeOrder(numberArray);
 /*********   *********/
 
 function search(e) {
+    // prevent default behavior
     e.preventDefault();
     
     // Get user input from search field
@@ -161,37 +161,31 @@ function search(e) {
         // Prepare request object, pass it the url
         const request = new Request(url, myInit);
 
-                // Pass request to fetch
-                fetch(request) 
-                    .then(response => response.json())
-                    .then(results => {
-                        console.log(results);
-                        showKanjiSearchResults(results);
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                });
+        // Pass request to fetch
+        fetch(request) 
+            .then(response => response.json())
+            .then(results => {
+                // show search results
+                showKanjiSearchResults(results);
+        })
+            .catch(function(error) {
+                console.log(error);
+        });
     }
 }
 
 
-const searchBtn = document.querySelector('.js-search-btn');
-const searchField = document.querySelector('#kanji-search-field');
-searchBtn.addEventListener('click', search, false);
-searchField.addEventListener('submit', search, false);
-
-
 function showKanjiSearchResults(searchResults) {
     
-    /* Create vairable to access elements in HTML through which to show the results */
+    /* Create vairables to access elements in HTML through which to show the results */
     let kanjiResult = document.querySelector('.js-kanji');
     let kanjiMeaning = document.querySelector('.js-meaning');
     let kanjiKunyomi = document.querySelector('.js-kunyomi');
     let kanjiOnyomi = document.querySelector('.js-onyomi');
-    // div that will hold examples
-    let exampleContainer = document.querySelector('.js-examples');
     // Field to show errors
     let errorField = document.querySelector('.js-error');
+    // div that will hold examples
+    let exampleContainer = document.querySelector('.js-examples');
     
     
     // Clear old search results
@@ -199,8 +193,8 @@ function showKanjiSearchResults(searchResults) {
     kanjiMeaning.innerHTML = "";
     kanjiKunyomi.innerHTML = "";
     kanjiOnyomi.innerHTML = "";
-    exampleContainer.innerHTML = "";
     errorField.innerHTML = "";
+    exampleContainer.innerHTML = "";
     
     
     /* if it was a valid search, show results */
@@ -231,5 +225,15 @@ function showKanjiSearchResults(searchResults) {
     else if (searchResults.error) {
         errorField.innerHTML = searchResults.error;
     }
+}
+
+
+// If there is a search button and kanji search field,
+// add event listeners to both
+if (document.querySelector('.js-search-btn') && document.querySelector('#kanji-search-field')) {
     
+    const searchBtn = document.querySelector('.js-search-btn');
+    const searchField = document.querySelector('#kanji-search-field');
+    searchBtn.addEventListener('click', search, false);
+    searchField.addEventListener('submit', search, false);
 }

@@ -2,8 +2,7 @@
 /*    #Reset            */
 /*----------------------*/
 
-/* Keep logo from looking like link on hover */
-/* a:link needs to come before a:hover for it to work */
+/* Keep h1 text from having <a> color on hover */
 h1 a:hover {
     color: inherit;
 }
@@ -16,7 +15,10 @@ h1 a:hover {
 /*    #Fonts            */
 /*----------------------*/
 
-/* Keep body font family declaration at the end */
+/********** Font Famalies **********/
+body {
+    font-family: 'Libre Baskerville', serif;
+}
 
 h1, h2, h3, h4, h5, h6,
 a, 
@@ -24,11 +26,9 @@ footer {
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    font-family: 'Libre Baskerville', serif;
-}
 
-.large-text {
+/********** Font Sizes **********/
+.large-text, .kana {
     font-size: 2rem;
 }
 
@@ -36,24 +36,18 @@ body {
     font-size: 4rem;
 }
 
-/* increase size of kana */
-.kana {
-    font-size: 2rem;
-    
-    /* not supported in most browsers, will appear above */
-    ruby-position: under;
-}
+
+
 
 
 /*----------------------*/
 /*    #Colors           */
 /*----------------------*/
 
-/*** Text Colors ***/
+/********** Text Colors **********/
 body {
     color: #000;
 }
-
 
 /* Headings are dark blue */
 h1, h2, h3, h4, h5, h6,
@@ -62,18 +56,15 @@ nav a {
 }
 
 /* Links, main nav on hover, and current link are bright pink */
-a, a:hover,
-.active {
-    color: #ac0b64;
-}
-
-/* change rt (romaji) and important text to be bright pink */
+/* rt (romaji) and important text */
+a, a:hover, .active,
 .kana rt, .important {
     color: #ac0b64;
 }
 
 
-/*** Background Colors ***/
+/********** Background Colors **********/
+
 /* white background around .active */
 nav li a:hover,
 .active {
@@ -87,6 +78,13 @@ nav {
 
 footer {
     background-color: #cdf2f4; /* pastel blue */
+}
+
+
+/********** Button Colors **********/
+.btn-red {
+    background-color: #ac0b64;
+    color: #fff;
 }
 
 
@@ -149,8 +147,9 @@ footer {
 
 
 /*----------------------*/
-/*    #Table - Kana     */
+/*    #Table            */
 /*----------------------*/
+
 /* remove border, center text, keep furigana on one line*/
 .table td {
     border: none;
@@ -171,22 +170,28 @@ footer {
 
 
 /*----------------------*/
-/*    #Testing          */
+/*    #Sizes - Images   */
 /*----------------------*/
+
 /* set dimensions of svg stroke images */
 .stroke {
     max-width: 150px;
     max-height: 150px;
 }
 
-input[type=search] {     
-    /* needed to avoid using default browser search box height, appearance */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+
+
+
+
+/*----------------------*/
+/*    #<rt> positioning */
+/*----------------------*/
+/* rt position */
+.kana {
+    /* not supported in most browsers, will appear above */
+    ruby-position: under;
 }
 
-.btn-red {
-    background-color: #ac0b64;
-    color: #fff;
-}
+
+
+
