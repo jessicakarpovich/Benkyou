@@ -130,18 +130,106 @@ function getStrokes(results, i) {
         for (let j=0; j < results.kanji.strokes.images.length; j++) {
             content += "<img class='stroke' src='" + results.kanji.strokes.images[j] + "' ";
             content += "alt='Stroke " + (j+1) + " of " + results.kanji.character + "'></img>";
-            imageDiv.innerHTML = content;
         }
+        imageDiv.innerHTML = content;
     }
 }
 
 
-// when the window finishes loading, load the numbers
-window.addEventListener('load', function() { showStrokeOrder(numberArray) }, false)
+// add event listener to window to show the stroke order of numbers
+//window.addEventListener('load', function() { showStrokeOrder(numberArray) }, false);
+// Show stroke order
+showStrokeOrder(numberArray);
 
 
 /**********  *********/
     /* Kanji Search */
 /*********   *********/
 
+function search(e) {
+    e.preventDefault();
+    
+    // Get user input from search field
+    const query = document.querySelector('#kanji-search-field').value;
+    
+    // Check that the string is not empty before continuing
+    if (query.trim().length != 0) {
+    
+        // Create url using user input
+        const url = api_endpoint + query;
 
+        // Prepare request object, pass it the url
+        const request = new Request(url, myInit);
+
+                // Pass request to fetch
+                fetch(request) 
+                    .then(response => response.json())
+                    .then(results => {
+                        console.log(results);
+                        showKanjiSearchResults(results);
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                });
+    }
+}
+
+
+const searchBtn = document.querySelector('.js-search-btn');
+const searchField = document.querySelector('#kanji-search-field');
+searchBtn.addEventListener('click', search, false);
+searchField.addEventListener('submit', search, false);
+
+
+function showKanjiSearchResults(searchResults) {
+    
+    /* Create vairable to access elements in HTML through which to show the results */
+    let kanjiResult = document.querySelector('.js-kanji');
+    let kanjiMeaning = document.querySelector('.js-meaning');
+    let kanjiKunyomi = document.querySelector('.js-kunyomi');
+    let kanjiOnyomi = document.querySelector('.js-onyomi');
+    // div that will hold examples
+    let exampleContainer = document.querySelector('.js-examples');
+    // Field to show errors
+    let errorField = document.querySelector('.js-error');
+    
+    
+    // Clear old search results
+    kanjiResult.innerHTML = ""; 
+    kanjiMeaning.innerHTML = "";
+    kanjiKunyomi.innerHTML = "";
+    kanjiOnyomi.innerHTML = "";
+    exampleContainer.innerHTML = "";
+    errorField.innerHTML = "";
+    
+    
+    /* if it was a valid search, show results */
+    if (searchResults.kanji) {
+        
+        // insert the kanji, meaning, and pronounciation
+        kanjiResult.innerHTML = searchResults.kanji.character;
+        kanjiMeaning.innerHTML = "<strong>Meaning: </strong>" + searchResults.kanji.meaning.english;
+        kanjiKunyomi.innerHTML = "<strong>Kunyomi: </strong>" + searchResults.kanji.kunyomi.hiragana;
+        kanjiOnyomi.innerHTML = "<strong>Onyomi: </strong>" + searchResults.kanji.onyomi.katakana;
+        
+        
+        // if there are examples
+        if (searchResults.examples) {
+            let content = "<h4 class='mb-3'>Examples:</h4>";
+
+            // for each example, show the Japanese and the English meaning
+            for (let i=0; i < searchResults.examples.length; i++) {
+                content += "<p>" + searchResults.examples[i].japanese + " - ";
+                content += searchResults.examples[i].meaning.english + "<p>";
+            }
+            // insert examples into the container div
+            exampleContainer.innerHTML = content;
+        }
+    }
+    
+    /* if there was an error, show that to the user (kanji not found) */
+    else if (searchResults.error) {
+        errorField.innerHTML = searchResults.error;
+    }
+    
+}

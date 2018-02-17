@@ -28,8 +28,21 @@ body {
     font-family: 'Libre Baskerville', serif;
 }
 
+.large-text {
+    font-size: 2rem;
+}
 
+.xl-text {
+    font-size: 4rem;
+}
 
+/* increase size of kana */
+.kana {
+    font-size: 2rem;
+    
+    /* not supported in most browsers, will appear above */
+    ruby-position: under;
+}
 
 
 /*----------------------*/
@@ -51,6 +64,11 @@ nav a {
 /* Links, main nav on hover, and current link are bright pink */
 a, a:hover,
 .active {
+    color: #ac0b64;
+}
+
+/* change rt (romaji) and important text to be bright pink */
+.kana rt, .important {
     color: #ac0b64;
 }
 
@@ -131,22 +149,8 @@ footer {
 
 
 /*----------------------*/
-/*    #Testing          */
+/*    #Table - Kana     */
 /*----------------------*/
-
-/* increase size of kana */
-.kana {
-    font-size: 2rem;
-    
-    /* not supported in most browsers, will appear above */
-    ruby-position: under;
-}
-
-/* change rt (romaji) color to be bright pink */
-.kana rt, .important {
-    color: #ac0b64;
-}
-
 /* remove border, center text, keep furigana on one line*/
 .table td {
     border: none;
@@ -162,15 +166,27 @@ footer {
     }
 }
 
-.large-text {
-    font-size: 2rem;
-}
 
-.xl-text {
-    font-size: 4rem;
-}
 
+
+
+/*----------------------*/
+/*    #Testing          */
+/*----------------------*/
+/* set dimensions of svg stroke images */
 .stroke {
     max-width: 150px;
     max-height: 150px;
+}
+
+input[type=search] {     
+    /* needed to avoid using default browser search box height, appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.btn-red {
+    background-color: #ac0b64;
+    color: #fff;
 }

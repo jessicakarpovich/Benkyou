@@ -114,7 +114,7 @@
                         
                         <p>In this case, the same kanji can have different readings depending on its context. For example, when talking about drinking water we would say mizu. When talking about the days of the week, Wednesday or Water Day, would be pronounced as Suiyoubi.</p>
                         
-                        <div class="table-responsive   d-flex  justify-content-sm-center">
+                        <div class="table-responsive   d-flex  justify-content-md-center">
                             <table class="table">
                                 <tr class="large-text">
                                     <td><ruby>一<rt>いち</rt></ruby></td>
@@ -241,21 +241,30 @@
                         <h3>Kanji Search</h3>
                         <p>Use the search field below to enter a kanji and see its readings and meaning.</p>
                         
-                        <div class="align-self-center">
-                            <form role="search">
+                        <article>
+                            <div class="d-flex  flex-column  align-items-center">
+                                <form role="search">
+                                    <div class="d-flex">
+                                        <input type="search" class="form-control" id="kanji-search-field" name="q" 
+                                               placeholder="Enter a kanji"
+                                               aria-label="Search for kanji meaning and readings.">
+                                        <button type="submit" class="btn  btn-red   js-search-btn">Search</button>
+                                    </div><!-- search input and button container -->
+                                </form>
+
+                                <p class="xl-text   js-kanji"></p>
+                                
                                 <div>
-                                    <input type="search" id="kanjiSearch" name="kanjiSearch"
-                                    placeholder="Enter a kanji"
-                                    aria-label="Search for a kanji meaning and readings.">
-                                    <button>Search</button>
+                                    <p class="js-meaning"></p>
+                                    <p class="js-kunyomi"></p>
+                                    <p class="js-onyomi"></p>
                                 </div>
-                            </form>
+                                
+                                <p class="js-error"></p>
+                            </div>
                             
-                            <p class="xl-text   js-kanji"></p>
-                            <p class="js-meaning"></p>
-                            <p class="js-kunyomi"></p>
-                            <p class="js-onyomi"></p>
-                        </div>
+                            <div class="js-examples"></div>
+                        </article><!-- container for form and search results -->
                     </section>
                     
                     
