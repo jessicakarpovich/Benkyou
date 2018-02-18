@@ -1,6 +1,6 @@
 # Introduction #
 
-This is a responsive website created for studying the Japanese writing system. It includes explanations on Hiragana, Katakana, and Kanji. For kanji, it also has a search feature which uses the [Kanji Alive API](https://app.kanjialive.com/api/docs) to provide the meaning and reading of the entered kanji.
+This is a responsive website created for studying the Japanese writing system. It includes explanations on Hiragana, Katakana, and Kanji. For kanji, it also has a search feature which uses the [Kanji Alive API](https://app.kanjialive.com/api/docs) to provide the meaning and reading of the entered kanji. View the page at <https://jessicakarpovich.github.io/Benkyou/>
 
 # Project Setup #
 

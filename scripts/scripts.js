@@ -136,7 +136,7 @@ function getStrokes(results, i) {
 /* Check that the first div from divArray is not null */
 if (document.querySelector(`[data-name=${CSS.escape(divArray[0])}]`)) {
     // add event listener to window to show the stroke order of numbers
-    window.addEventListener('load', function() { showStrokeOrder(numberArray) }, false);
+    window.addEventListener('load', function() { showStrokeOrder(numberArray); }, false);
 }
 
 
@@ -153,7 +153,7 @@ function search(e) {
     const query = document.querySelector('#kanji-search-field').value;
     
     // Check that the string is not empty before continuing
-    if (query.trim().length != 0) {
+    if (query.trim().length !== 0) {
     
         // Create url using user input
         const url = api_endpoint + query;
