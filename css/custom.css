@@ -195,3 +195,15 @@ footer {
 
 
 
+
+/*----------------------*/
+/*    #Back-to-top Link */
+/*----------------------*/
+/* have it stick on bottom right corner*/
+#back-to-top {
+    position: fixed;
+    right: 1rem;
+    left: auto;
+    bottom: 1rem;
+    z-index: 1050;
+}
